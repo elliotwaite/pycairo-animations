@@ -12,7 +12,7 @@ A library for generating animations using [Pycairo](https://pycairo.readthedocs.
 ### Overview
 
 The [anim](/anim) directory contains two classes, `Frame` and `VideoWriter`.
-The `Frame` class manages a Cairo surface (the image data) and a Cairo context (what Cairo uses to update the image data). The `Frame` class has methods for drawing lines, writing text, applying a blur, and clearing parts or all of the image. That `Frame` instance can then be passed to a `VideoWriter` instance to write that frame to disk as a PNG image file in a temporary directory. Once all the frames have been written to disk, call the `write_video()` method on the `VideoWriter` instance to run the ffmpeg process that merges all those frames into a video file.
+The `Frame` class manages a Cairo surface (the image data) and a Cairo context (what Cairo uses to update the image data). The `Frame` class has methods for drawing lines, writing text, applying a blur, and clearing parts or all of the image. A `Frame` instance can be passed to a `VideoWriter` instance to write that frame to disk as a PNG image file in a temporary directory. Once all the frames have been written to disk, call the `write_video()` method on the `VideoWriter` instance to run the ffmpeg process that merges all those frames into a video file.
 
 The [examples](/examples) directory contains examples of using the library. Here's the output from [`hello_world.py`](/examples/hello_world.py) (converted to a GIF):
 
