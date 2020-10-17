@@ -12,6 +12,7 @@ The [anim](/anim) directory contains two classes, `Frame` and `VideoWriter`.
 The `Frame` class manages a Cairo surface (the image data) and a Cairo context (what Cairo uses to update the image data). The `Frame` class has methods for drawing lines, writing text, applying a blur, and clearing parts or all of the image. That frame can then be passed to an instance of `VideoWriter` to write that frame to disk as a PNG image file in a temporary directory. Once all the frames have been written to disk, call the `write_video()` method on the `VideoWriter` instance to run the ffmpeg command that will merge all those frames into a video file.
 
 The [examples](/examples) directory contains examples of using the library. Here's the output from [`hello_world.py`](/examples/hello_world.py) (converted to a GIF):
+
 ![](/examples/hello_world.gif)
 
 
