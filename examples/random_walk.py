@@ -22,7 +22,7 @@ LINE_COLOR = (1, 0, 0, 0.025)
 LINE_WIDTH = 1
 
 CUR_DIR = os.path.dirname(os.path.realpath(__file__))
-VIDEO_OUTPUT_PATH = os.path.join(CUR_DIR, 'random_walk.py')
+VIDEO_OUTPUT_PATH = os.path.join(CUR_DIR, 'random_walk.mov')
 
 
 def main():
