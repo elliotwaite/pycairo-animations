@@ -1,6 +1,6 @@
 # Pycairo Animation Library
 
-A library for generating animations using [Pycairo](https://pycairo.readthedocs.io/en/latest/) (the Python version of Cairo) and [ffmpeg](https://ffmpeg.org/ffmpeg.html). Pycairo is used to generate each frame of the animation, and then an ffmpeg process is called to merge all those frames into a ProRes (.mov) video file.
+A library for generating animations using [Pycairo](https://pycairo.readthedocs.io/en/latest/) (the Python version of Cairo) and [ffmpeg](https://ffmpeg.org/ffmpeg.html). Pycairo is used to generate each frame of the animation and then an ffmpeg process is called to merge all those frames into a ProRes (.mov) video file.
 
 ### Requirements
 
@@ -12,7 +12,7 @@ A library for generating animations using [Pycairo](https://pycairo.readthedocs.
 ### Overview
 
 The [anim](/anim) directory contains two classes, `Frame` and `VideoWriter`.
-The `Frame` class manages a Cairo surface (the image data) and a Cairo context (what Cairo uses to update the image data). The `Frame` class has methods for drawing lines, writing text, applying a blur, and clearing parts or all of the image. That frame can then be passed to an instance of `VideoWriter` to write that frame to disk as a PNG image file in a temporary directory. Once all the frames have been written to disk, call the `write_video()` method on the `VideoWriter` instance to run the ffmpeg command that will merge all those frames into a video file.
+The `Frame` class manages a Cairo surface (the image data) and a Cairo context (what Cairo uses to update the image data). The `Frame` class has methods for drawing lines, writing text, applying a blur, and clearing parts or all of the image. That `frame` instance can then be passed to a `VideoWriter` instance to write that frame to disk as a PNG image file in a temporary directory. Once all the frames have been written to disk, call the `write_video()` method on the `VideoWriter` instance to run the ffmpeg process that merges all those frames into a video file.
 
 The [examples](/examples) directory contains examples of using the library. Here's the output from [`hello_world.py`](/examples/hello_world.py) (converted to a GIF):
 
