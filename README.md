@@ -4,7 +4,8 @@ A library for generating animations using [Pycairo](https://pycairo.readthedocs.
 
 ### Requirements
 
-* ffmpeg - I use the Homebrew version: https://formulae.brew.sh/formula/ffmpeg. If you use a different version, make sure to specify `ffmpeg_path` when initializing an instance of `VideoWriter` (this should be the path to where your ffmpeg bin file was installed). 
+* (pycairo)[https://pypi.org/project/pycairo/]
+* (ffmpeg)[https://formulae.brew.sh/formula/ffmpeg] - I use the Homebrew version: https://formulae.brew.sh/formula/ffmpeg. If you use a different version, make sure to specify `ffmpeg_path` when initializing an instance of `VideoWriter` (this should be the path to where your ffmpeg bin file was installed). 
 
 ### Overview
 
