@@ -18,5 +18,8 @@ The [examples](/examples) directory contains examples of using the library. Here
 
 ![](/examples/hello_world.gif)
 
+Here's the output from [`random_walk.py`](/examples/random_walk.py) (converted to a GIF):
+
+![](/examples/random_walk.gif)
 
 ⚠️ There are currently very few methods available on the `Frame` class. I've only added the methods that I've needed for my personal use cases. But you can easily extend the class to meet your needs. If you want to extend the class, but you're not familiar with Pycairo, here's a great tutorial that explains how Pycairo works: [Cairo Tutorial for Python Programmers](https://web.archive.org/web/20210416173739/https://www.tortall.net/mu/wiki/CairoTutorial) (Note: this link is to an [archived](https://web.archive.org/web/2021*/https://www.tortall.net/mu/wiki/CairoTutorial) version of the [original](https://www.tortall.net/mu/wiki/CairoTutorial) since the original seems to no longer working).
