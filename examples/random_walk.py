@@ -3,7 +3,7 @@ import os
 import random
 import tqdm
 
-from anim import VideoWriter, Frame
+from anim import Frame, VideoWriter
 
 WIDTH = 1280
 HEIGHT = 720
