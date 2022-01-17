@@ -1,6 +1,4 @@
 import math
-
-import cairo
 import tqdm
 
 from anim import Frame, VideoWriter
@@ -56,10 +54,15 @@ def main():
         secs_left = COUNT_DOWN_SECS - cur_secs
 
         frame.clear_rect(
-            x=bar_x - 50, y=bar_y - 100, width=bar_width + 100, height=bar_height + 200,
+            x=bar_x - 50,
+            y=bar_y - 100,
+            width=bar_width + 100,
+            height=bar_height + 200,
         )
 
-        # Draw the progress bar foreground with a glow blur.
+        # Draw the progress bar foreground with a glow effect. To do this, we
+        # draw it once, then blur that area, then draw it a second time without
+        # blurring it.
         frame.line(
             points=[(bar_x, bar_y), (bar_x + bar_width * progress, bar_y)],
             color='f0f',
@@ -81,7 +84,9 @@ def main():
         # Draw the progress bar background. We have to do this after the
         # foreground so that it won't get blurred.
         frame.line(
-            points=[(bar_x, bar_y), (bar_x + bar_width, bar_y)], color='f0f3', line_width=30,
+            points=[(bar_x, bar_y), (bar_x + bar_width, bar_y)],
+            color='f0f3',
+            line_width=30,
         )
 
         # Draw the countdown time.
