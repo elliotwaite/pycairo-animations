@@ -3,7 +3,7 @@ import os
 import random
 import tqdm
 
-import anim
+from anim import VideoWriter, Frame
 
 WIDTH = 1280
 HEIGHT = 720
@@ -26,8 +26,8 @@ VIDEO_OUTPUT_PATH = os.path.join(CUR_DIR, 'random_walk.mov')
 
 
 def main():
-    video_writer = anim.VideoWriter(FPS)
-    frame = anim.Frame(WIDTH, HEIGHT)
+    video_writer = VideoWriter(FPS)
+    frame = Frame(WIDTH, HEIGHT)
 
     steps_per_frame = INITIAL_STEPS_PER_FRAME
     x = 0
