@@ -26,8 +26,8 @@ VIDEO_OUTPUT_PATH = os.path.join(CUR_DIR, 'random_walk.mov')
 
 
 def main():
-    video_writer = VideoWriter(FPS)
     frame = Frame(WIDTH, HEIGHT)
+    video_writer = VideoWriter(FPS)
 
     steps_per_frame = INITIAL_STEPS_PER_FRAME
     x = 0
