@@ -22,7 +22,7 @@ INITIAL_STEPS_PER_FRAME = 10
 STEPS_PER_FRAME_MULTIPLIER = 1.025
 
 CUR_DIR = os.path.dirname(os.path.realpath(__file__))
-VIDEO_OUTPUT_PATH = os.path.join(CUR_DIR, 'random_walk.mov')
+VIDEO_OUTPUT_PATH = os.path.join(CUR_DIR, 'random_walks.mov')
 
 
 def main():
