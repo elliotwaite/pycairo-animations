@@ -65,8 +65,8 @@ def color_to_rgba(color):
 
 
 def secs_to_time_str(secs, keep_mins=False):
-    h = int(secs / 360)
-    m = int((secs % 360) / 60)
+    h = int(secs / 3600)
+    m = int((secs % 3600) / 60)
     s = int(secs % 60)
     if h:
         return f'{h}:{m:02}:{s:02}'
